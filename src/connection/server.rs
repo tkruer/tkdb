@@ -45,6 +45,7 @@ impl Server {
             if parts.is_empty() {
                 continue;
             }
+            println!("Received command: {line}");
 
             let response = match parts[0].to_uppercase().as_str() {
                 "GET" if parts.len() == 2 => {
